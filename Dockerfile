@@ -1,4 +1,4 @@
-FROM maven:3.8.5-openjdk-17 AS builder
+FROM  docker.io/maven:3.8.5-openjdk-17 AS builder
 WORKDIR /ops-app
 # Copy source code instead of cloning from GitHub
 COPY . .
