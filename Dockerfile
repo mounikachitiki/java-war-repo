@@ -4,7 +4,7 @@ WORKDIR /ops-app
 COPY . .
 RUN mvn clean package -DskipTests
 # Second Stage: Run with Tomcat
-FROM tomcat:10.1-jdk17
+FROM docker.io/library/tomcat:10.1-jdk17
 WORKDIR /usr/local/tomcat/webapps/
 # Copy the generated WAR file from the builder stage
 COPY --from=builder /ops-app/target/*.war opskill.war
