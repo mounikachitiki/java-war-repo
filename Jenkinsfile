@@ -1,5 +1,5 @@
 pipeline {
-    agent { label dagent }
+    agent { label 'dockeragent' }
 
     environment {
         AWS_REGION = 'us-east-1' // Change as per requirement
